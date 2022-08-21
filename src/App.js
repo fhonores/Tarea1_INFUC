@@ -22,6 +22,16 @@ export default function App() {
     setCount((prevCount) => prevCount - 1);
   };
 
+  async function getDogs() {
+    try {
+      const response = await fetch ("https://dog.ceo/api/breeds/list/all");
+      const data = await response.json();
+    } catch (err) {
+      console.error("Error al obtener listado");
+      console.error(err);
+    }
+  }
+
   return (
     <div>
       <Title text="INF3551"></Title>
