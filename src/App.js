@@ -9,7 +9,7 @@ function Title(props) {
 }
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const handleClick = () => {
     console.log('click');
     setCount((prevCount) => prevCount + 1);
