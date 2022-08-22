@@ -1,3 +1,6 @@
+// (Pseudo) Coders: José Luis Zúñiga - Felipe Honores
+
+
 import React, { useState } from 'react';
 import './style.css';
 import { isEven } from './utils/isEven';
@@ -35,5 +38,7 @@ export default function App() {
       <p>El número {count} es... {isEven(count) ? 'par':'impar' } y {isPrime(count) ? 'primo':'compuesto'}</p>
     
     </div>
+
+
   );
 }
