@@ -6,6 +6,7 @@ import { isPrime}  from './utils/isPrime';
 
 export default function App() {
   const [count, setCount] = useState(1);
+  const [prime, setPrime] = useState("");
   const handleClick = () => {
     console.log('click');
     setCount((prevCount) => prevCount + 1);
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <div>
-      <h1> INF3551 </h1>
+      <h1> INF3551 - Actividad 1</h1>
       
       <p>Valor del contador: {count}</p>
 
@@ -32,7 +33,7 @@ export default function App() {
 
   
       <p>El número {count} es... {isEven(count) ? 'par':'impar' } y {isPrime(count) ? 'primo':'compuesto'}</p>
-
+    
     </div>
   );
 }
