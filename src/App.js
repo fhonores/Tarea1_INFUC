@@ -1,4 +1,5 @@
 // (Pseudo) Coders: José Luis Zúñiga - Felipe Honores
+// Vintage style only for fun...
 
 
 import React, { useState } from 'react';
