@@ -11,24 +11,27 @@ import { isPrime}  from './utils/isPrime';
 export default function App() {
   const [count, setCount] = useState(1);
   const [prime, setPrime] = useState("");
+
   const handleClick = () => {
-    console.log('click');
-    setCount((prevCount) => prevCount + 1);
+    setCount((current) => current + 1);
   };
+
   const handleReset = () => {
-    setCount((prevCount) => 1);
+    setCount((current) => 1);
   };
 
   const handleReduce = () => {
-    setCount((prevCount) => prevCount - 1);
+    setCount((current) => current - 1);
   };
+
+ 
 
 
   return (
     <div>
       <h1> INF3551 - Actividad 1</h1>
       
-      <p>Valor del contador: {count}</p>
+      <p style={{ color: count & 1  ? 'red' : count & 2 ? 'yellow':'green'}}>Valor del contador: {count} </p>
 
       <button onClick={handleClick}>Incrementar </button> &nbsp;
       <button onClick={handleReduce}>Reducir</button> &nbsp;
