@@ -3,10 +3,6 @@ import './style.css';
 import { isEven } from './utils/isEven';
 import { isPrime}  from './utils/isPrime';
 
-function Title(props) {
-  const text = props.text;
-  return <h1>{text}</h1>;
-}
 
 export default function App() {
   const [count, setCount] = useState(1);
@@ -25,17 +21,17 @@ export default function App() {
 
   return (
     <div>
-      <Title text="INF3551"></Title>
+      <h1> INF3551 </h1>
       
       <p>Valor del contador {count}</p>
 
       <button onClick={handleClick}>Incrementar </button> &nbsp;
-      <button onClick={handleReduce}>reducir contador</button> &nbsp;
+      <button onClick={handleReduce}>Reducir</button> &nbsp;
       <button onClick={handleReset}>Reset</button>
       {count < 10 && <h3>El valor del contador es menor a 10</h3>}
 
   
-      <p>El numero {count} es... {isEven(count) ? 'par':'impar' } y {isPrime(count) ? 'primo':'normal'}</p>
+      <p>El numero {count} es... {isEven(count) ? 'par':'impar' } y {isPrime(count) ? 'primo':'compuesto'}</p>
 
     </div>
   );
